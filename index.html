@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VR Associates | ITR Computation Generator</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.js"></script>
+</head>
+<body>
+
+  <div class="appbar">
+    <div class="brand">
+      <div class="b1">Vineet Rawat &amp; Associates</div>
+      <div class="b2">ITR Computation Generator — ITR-1 &amp; ITR-2</div>
+    </div>
+    <div class="actions" id="toolbar" style="display:none;">
+      <span class="meta" id="meta"></span>
+      <button class="btn btn-ghost" id="btnReset">New Upload</button>
+      <button class="btn btn-ghost" id="btnPrint">Download PDF</button>
+      <button class="btn btn-primary" id="btnWord">Download Word</button>
+    </div>
+  </div>
+
+  <div class="stage">
+
+    <div class="dropzone" id="dropzone">
+      <h2>Upload the client's ITR JSON</h2>
+      <p>Drop the e-filing JSON file here &mdash; ITR-1 and ITR-2 are supported.</p>
+      <label class="pick-btn" for="fileInput">Choose JSON File</label>
+      <input type="file" id="fileInput" accept="application/json,.json" />
+      <div class="hint">The computation is generated entirely in your browser &mdash; nothing is uploaded anywhere.</div>
+      <div class="error-box" id="errorBox"></div>
+    </div>
+
+    <div class="edit-hint" id="editHint" style="display:none;">
+      Click on any value below to edit it directly before exporting &mdash; every field is editable.
+    </div>
+
+    <div class="sheet-wrap" id="sheetWrap" style="display:none;">
+      <div id="sheet-content"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
